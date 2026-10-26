@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://palazuel0s2004.github.io/llm-api-senza-censura-italia/sitemap.xml
+
+# API LLM senza censura per sviluppatori in Italia
+# API di modello linguistico senza filtro ideologico, compatibile OpenAI. Base https://uncensored-llm.sbs/v1, streaming, tool calling, documentazione in italiano con esempi di codice.

@@ -1,0 +1,31 @@
+# API LLM senza censura per sviluppatori in Italia
+
+> API compatibile OpenAI per team italiani. Italiano naturale, system prompt rispettato, nessun paragrafo di avvertenza prima di ogni risposta. Base: https://uncensored-llm.sbs/v1
+
+Se hai usato un modello linguistico per scrivere di politica, salute, sicurezza offensiva o qualunque tema che il fornitore estero considera sensibile, sai com'è: rifiuto generico, avviso di sicurezza al posto del contenuto, risposta a metà. Questa pagina descrive un'alternativa diretta — un'API compatibile OpenAI che risponde alla domanda così com'è stata posta.
+
+## API
+- Base URL: https://uncensored-llm.sbs/v1
+- Auth: Authorization: Bearer <key>
+- Compatible: OpenAI chat completions, streaming, tool calling
+- Models: GET https://uncensored-llm.sbs/v1/models
+- Docs: https://uncensored-llm.sbs
+
+## Perché conta per chi sviluppa in Italia
+Un prodotto in italiano ha bisogno di un modello che scriva in italiano e non una traduzione con calchi. Il secondo problema costa di più: modelli che su temi normali — affitto, busta paga, salute, penetration test — rispondono con un template e bloccano qualsiasi automazione. Qui la decisione torna al team di prodotto, mentre streaming, tool calling e JSON mode restano identici. L'unico limite che rimane è il contenuto illegale.
+
+## Domande che arrivano davvero
+### È davvero compatibile con OpenAI?
+Sì. /v1/chat/completions, /v1/models e lo streaming SSE usano lo stesso formato di eventi. L'SDK ufficiale funziona cambiando base_url.
+
+### C'è un piano gratuito o di prova?
+Le condizioni valide sono pubblicate su https://uncensored-llm.sbs. Le variazioni di prezzo vengono annunciate lì, non in questo repository.
+
+### Cosa viene bloccato?
+Contenuti illegali, compreso qualsiasi materiale con minori. Fuori da lì, la risposta riguarda la richiesta fatta.
+
+### E il GDPR?
+Trattamento e conservazione sono descritti nell'informativa privacy pubblicata sul sito. In produzione: chiave per ambiente e nessun dato personale nei prompt senza base giuridica.
+
+### Funziona con Open WebUI o LibreChat?
+Sì, entrambi accettano una base URL compatibile OpenAI. Basta inserire https://uncensored-llm.sbs/v1 e la chiave.
